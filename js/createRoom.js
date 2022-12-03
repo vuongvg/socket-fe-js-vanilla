@@ -97,6 +97,7 @@ socket.emit("load-data", room);
 socket.on("check", (data) => console.log(data));
 setInterval(() => {
    const time= new Date().toLocaleTimeString()
+   fetch(url).then(res=>console.log('res',res))
    socket.emit("check", "online: "+ time);
    console.log(` check`, )
 }, 60* 1000); 
